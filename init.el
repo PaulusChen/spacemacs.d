@@ -45,7 +45,8 @@ values."
      (c-c++ :variables
             c-c++-default-mode-for-headers 'c++-mode
             c-c++-enable-clang-support t)
-     cscope
+     ;; cscope
+     gtags
      ;; org
      ;; (shell :variables
      ;;        shell-default-height 30
