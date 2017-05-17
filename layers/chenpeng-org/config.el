@@ -1,0 +1,2 @@
+
+(defvar blog-admin-dir "")

@@ -30,7 +30,8 @@
 ;;; Code:
 
 (defconst chenpeng-packages
-  '()
+  '(
+    )
   "The list of Lisp packages required by the chenpeng layer.
 
 Each entry is either:
