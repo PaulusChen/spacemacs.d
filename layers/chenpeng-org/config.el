@@ -1,2 +1,2 @@
 
-(defvar blog-admin-dir "")
+(defvar blog-admin-dir "~/blog")
