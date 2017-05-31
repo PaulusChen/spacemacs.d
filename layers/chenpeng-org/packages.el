@@ -14,7 +14,6 @@
 
 (defconst chenpeng-org-packages
   `(
-    (org :toggle)
     ;;(org :location build-in)
     ;;; (org-pomodoro)
     (blog-admin :location (recipe
