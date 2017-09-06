@@ -52,6 +52,8 @@
       (setq org-agenda-use-tag-inheritance nil) ;; 3-4x speedup
       (setq org-agenda-window-setup 'current-window)
       (setq org-log-done t)
+      (org-babel-do-load-languages 'org-babel-do-load-languages
+                                   '((dot . t)))
     )
   )
 )
