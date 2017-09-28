@@ -64,6 +64,7 @@ values."
      ;; spell-checking8
      ;; syntax-checking
      ;; version-control
+     chinese
      )
    ;; List of additional packages that will be installed without being
    ;; wrapped in a layer. If you need some configuration for these
