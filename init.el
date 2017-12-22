@@ -55,8 +55,8 @@ values."
             c-c++-enable-clang-support t)
      ;; cscope
      gtags
-     chenpeng
      asm
+     chenpeng
      ;; org
      ;; (shell :variables
      ;;        shell-default-height 30
