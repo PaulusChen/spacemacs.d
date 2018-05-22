@@ -1,6 +1,8 @@
+
 (defun my-setup-indent (n)
   ;; java/c/c++
   (setq c-basic-offset n)
+  (setq default-tab-width 4)
 
   ;; web development
   (setq coffee-tab-width n) ; coffeescript
@@ -12,3 +14,4 @@
   (setq web-mode-code-indent-offset n) ; web-mode, js code in html file
   (setq css-indent-offset n) ; css-mode
   )
+
