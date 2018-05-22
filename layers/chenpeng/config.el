@@ -8,4 +8,4 @@
 (set-selection-coding-system 'utf-8)
 (prefer-coding-system 'utf-8)
 
-(my-setup-indent 4)
+(my-setup-indent 2)
