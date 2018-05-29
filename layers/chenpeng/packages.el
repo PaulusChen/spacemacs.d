@@ -31,6 +31,7 @@
 
 (defconst chenpeng-packages
   '(
+    protobuf-mode
     )
   "The list of Lisp packages required by the chenpeng layer.
 
@@ -59,5 +60,14 @@ Each entry is either:
       - A list beginning with the symbol `recipe' is a melpa
         recipe.  See: https://github.com/milkypostman/melpa#recipe-format")
 
+(defun chenpeng/init-protobuf-mode()
+  (use-package chenpeng
+    :defer t
+    :commands (protobuf-mode)
+    :init
+    (progn
+      (add-hook 'c-mode-hook 'protobuf-mode)
+      (add-hook 'c++-mode-hook 'protobuf-mode))
+    ))
 
 ;;; packages.el ends here
