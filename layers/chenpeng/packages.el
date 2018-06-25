@@ -32,6 +32,8 @@
 (defconst chenpeng-packages
   '(
     protobuf-mode
+    bazel-mode
+    dockerfile-mode
     )
   "The list of Lisp packages required by the chenpeng layer.
 
@@ -66,8 +68,29 @@ Each entry is either:
     :commands (protobuf-mode)
     :init
     (progn
-      (add-hook 'c-mode-hook 'protobuf-mode)
-      (add-hook 'c++-mode-hook 'protobuf-mode))
-    ))
+      ;; (add-hook 'c-mode-hook 'protobuf-mode)
+      ;; (add-hook 'c++-mode-hook 'protobuf-mode)
+    )
+  )
+)
 
+(defun chenpeng/init-bazel-mode()
+  (use-package chenpeng
+    :defer t
+    :commands (bazel-mode)
+    :init
+    (progn
+      )
+    )
+  )
+
+(defun chenpeng/init-dockerfile-mode()
+  (use-package chenpeng
+    :defer t
+    :commands (dockerfile-mode)
+    :init
+    (progn
+      )
+    )
+  )
 ;;; packages.el ends here
