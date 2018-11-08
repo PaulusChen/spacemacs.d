@@ -34,6 +34,7 @@
     protobuf-mode
     bazel-mode
     dockerfile-mode
+    zenburn-theme
     )
   "The list of Lisp packages required by the chenpeng layer.
 
@@ -88,6 +89,15 @@ Each entry is either:
   (use-package chenpeng
     :defer t
     :commands (dockerfile-mode)
+    :init
+    (progn
+      )
+    )
+  )
+
+(defun chenpeng/init-zenburn-theme()
+  (use-package chenpeng
+    :defer t
     :init
     (progn
       )
