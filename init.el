@@ -338,9 +338,6 @@ you should place your code here."
   (global-set-key [C-M-tab] 'clang-format-region)
   ;; Bind clang-format-buffer to tab on the c++-mode only:
   (add-hook 'cc-mode-hook 'clang-format-bindings)
-  (defun clang-format-bindings ()
-    (define-key cc-mode-map [TAB] 'clang-format-region)
-    )
   )
 
 ;; Do not write anything past this comment. This is where Emacs will

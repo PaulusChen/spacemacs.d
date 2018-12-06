@@ -14,4 +14,3 @@
   (setq web-mode-code-indent-offset n) ; web-mode, js code in html file
   (setq css-indent-offset n) ; css-mode
   )
-
