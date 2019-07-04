@@ -20,3 +20,40 @@
 
 (spacemacs/add-to-hooks 'clang-format-buffer-smart-on-save
                         '(c-mode-hook c++-mode-hook))
+
+(defcustom buildifier-bin "buildifier"
+  "Location of the buildifier binary."
+  :type 'string
+  :group 'buildifier)
+
+(defcustom buildifier-path-regex
+  "BUILD\\|WORKSPACE\\|BAZEL"
+  "Regular expression describing base paths that need buildifier."
+  :type 'string
+  :group 'buildifier)
+
+(defun buildifier ()
+  "Run buildifier on current buffer."
+  (interactive)
+  (when (and (string-match buildifier-path-regex
+                           (file-name-nondirectory
+                            (buffer-file-name)))
+             (executable-find buildifier-bin))
+    (let ((p (point))
+          (tmp (make-temp-file "buildifier")))
+      (write-region nil nil tmp)
+      (let ((result (with-temp-buffer
+                      (cons (call-process buildifier-bin tmp t nil)
+                            (buffer-string)))))
+        (if (= (car result) 0)
+            (save-excursion
+              (erase-buffer)
+              (insert (cdr result)))
+          (warn "%s failed: %s" buildifier-bin (cdr result)))
+        (goto-char p)
+        (delete-file tmp nil)))))
+
+(add-hook 'before-save-hook 'buildifier)
+
+
+
