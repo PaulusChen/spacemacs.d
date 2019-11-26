@@ -75,8 +75,8 @@ Each entry is either:
     (progn
       (setq irony-user-dir (f-slash (f-join user-home-directory "bin" "irony")))
       (setq irony-server-install-prefix irony-user-dir)
-      (setq irony-cdb-search-directory-list "/home/chenpeng/Documents/SvnDir/integrity-monitor/trunk/")
-      (add-hook 'c++-mode-hook (lambda () (setq irony-additional-clang-options '("-std=c++11"))))
+      (setq irony-cdb-search-directory-list "/home/cp88201/GitDir/ant3")
+      (add-hook 'c++-mode-hook (lambda () (setq irony-additional-clang-options '("-std=c++14"))))
       (defun irony/irony-mode-hook ()
         (define-key irony-mode-map [remap completion-at-point] 'irony-completion-at-point-async)
         (define-key irony-mode-map [remap complete-symbol] 'irony-completion-at-point-async))
