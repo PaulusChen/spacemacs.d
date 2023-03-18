@@ -16,9 +16,9 @@
   `(
     ;;(org :location build-in)
     ;;; (org-pomodoro)
-    (blog-admin :location (recipe
-                           :fetcher github
-                           :repo "codefalling/blog-admin"))
+    ;;(blog-admin :location (recipe
+    ;;                      :fetcher github
+    ;;                      :repo "codefalling/blog-admin"))
     )
 )
 

@@ -55,7 +55,7 @@ This function should only modify configuration layer settings."
      ;; version-control
 
      sql
-     php
+     ;; php
      lua
      html
      yaml
